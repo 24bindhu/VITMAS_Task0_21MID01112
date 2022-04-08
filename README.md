@@ -1,4 +1,4 @@
-# VITMAS_Task0_21MID01112
+# VITMAS_Task0_21MID0112
 this is my repository which contains the github commands with their purpose .
  Git clone
 Git clone is a command for downloading existing source code from a remote repository (like Github, for example). In other words, Git clone basically makes an identical copy of the latest version of a project in a repository and saves it to your computer.
