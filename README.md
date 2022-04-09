@@ -1,48 +1,75 @@
 # VITMAS_Task0_21MID0112
-this is my repository which contains the github commands with their purpose .
- Git clone
-Git clone is a command for downloading existing source code from a remote repository (like Github, for example). In other words, Git clone basically makes an identical copy of the latest version of a project in a repository and saves it to your computer.
+git init
+This command turns a directory into an empty Git repository.
 
-There are a couple of ways to download the source code, but mostly I prefer the clone with https way:
+git init [repository name]
+git config
+The command sets the author name and email adress respectively to be used with the commits.
 
-git clone <https://name-of-the-repository-link>
-2. Git branch
-Branches are highly important in the git world. By using branches, several developers are able to work in parallel on the same project simultaneously. We can use the git branch command for creating, listing and deleting branches.
+git config -global user.name "[name]"
+git config -global user.email "[email]"
+git add
+The following command adds a file to the staging area.
 
-Creating a new branch:
-git branch <branch-name>This command will create a branch locally. To push the new branch into the remote repository, you need to use the following command:
-git push -u <remote> <branch-name>
-Viewing branches:
-git branch or git branch --list
-Deleting a branch:
-git branch -d <branch-name>
- Git checkout
-This is also one of the most used Git commands. To work in a branch, first you need to switch to it. We use git checkout mostly for switching from one branch to another. We can also use it for checking out files and commits.
-git checkout <name-of-your-branch>
-Git status
-The Git status command gives us all the necessary information about the current branch. 
+git add [file]
+The following command adds one or more to the staging area.
+
+git add *
+git commit
+This command records or snapshots the file permanently in the version history.
+
+git commit -m "[Type in the commit message]"
+This command commits any files you’ve added with the git add command and also commits any files you’ve changed since then.
+
+git command -a
+git status
+This command returns the current state of the repository.
 
 git status
-We can gather information like:
-Whether the current branch is up to date
-Whether there is anything to commit, push or pull
-Whether there are files staged, unstaged or untracked
-Whether there are files created, modified or deleted
- Git add
-When we create, modify or delete a file, these changes will happen in our local and won't be included in the next commit (unless we change the configurations).
-We need to use the git add command to include the changes of a file(s) into our next commit. 
-To add a single file:
-git add <file>
-Git commit
-This is maybe the most-used command of Git. Once we reach a certain point in development, we want to save our changes (maybe after a specific task or issue).
+git branch
+To determine which branch the local repository is on, add a branch, or delete a branch.
 
-Git commit is like setting a checkpoint in the development process which you can go back to later if needed.
+git branch
+git branch [branch name] (Creates a new branch)
+git branch -d [branch name] (Deletes the feature branch)
+git checkout
+To start working in a different branch, use git checkout to switch branches.
 
-We also need to write a short message to explain what we have developed or changed in the source code.
+git checkout
+git merge
+Integrate branches together.
 
-git commit -m "commit message"
- Git push
-After committing your changes, the next thing you want to do is send your changes to the remote server. Git push uploads your commits to the remote repository.
-git push <remote> <branch-name>
-However, if your branch is newly created, then you also need to upload the branch with the following command:
-git push --set-upstream <remote> <name-of-your-branch>
+git merge [branch name]
+git remote
+To connect a local repository with a remote repository.
+
+git remote add [variable name] [remote server link]
+git clone
+To create a local working copy of an existing remote repository.
+
+git clone [url]
+git pull
+To get the latest version of a repository run git pull.
+
+git pull [Repository Link]
+git push
+This command sends the committed changes of master branch to your remote repository.
+
+git push [variable name] master
+This command sends the branch commits to your remote repository.
+
+git push [variable name] [branch]
+This command pushes all branches to your remote repository.
+
+git push -all [variable name]
+This command deletes a branch on your remote repository.
+
+git push [variable name] :[branch name]
+git rm
+This command deletes the file from your working directory and stages the deletion.
+
+git rm [file]
+git log
+This command is used to list the version history for the current branch.
+
+git log
